@@ -2,6 +2,18 @@ import java.util.Scanner;
 
 public class Craps {
     public static void main(String[] args) {
+        System.out.println("Do you need instructions? (y/n)");
+        Scanner input1 = new Scanner(System.in);
+        String answer1 = input.nextLine();
+        if(answer1.equals("y")){
+            System.out.println("1. Roll two six-sided dice.");
+            System.out.println("2. a. On first roll, if you get a 7 or 11 you win!");
+            System.out.println("2. b. On first roll, if you get a 2, 3, or 12 you lose!");
+            System.out.println("2. c. Any other number you don't win or lose. The die roll becomes your 'point.'");
+            System.out.println("3. Keep rolling the dice again until:");
+            System.out.println("4. a. You roll the point again and win!");
+            System.out.println("4. b. or you roll a 7 and lose.");
+        }
         boolean playAgain = true;
         while (playAgain) {
             play();
@@ -38,7 +50,7 @@ public class Craps {
     public static boolean playAgain(){
         Scanner input = new Scanner(System.in);
         System.out.print("Play again? (y/n): ");
-        String answer = input.next();
+        String answer = input.nextLine();
         if (answer.equals("y")) {
             return true;
         } else {
